@@ -1,0 +1,8 @@
+{
+  "properties": [
+    {
+      "name": "spoonacular.urls.mealplan",
+      "type": "java.lang.String",
+      "description": "Description for spoonacular.urls.mealplan."
+  }
+] }
