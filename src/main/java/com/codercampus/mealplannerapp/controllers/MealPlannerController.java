@@ -42,7 +42,7 @@ public class MealPlannerController {
         RestTemplate restTemplate = new RestTemplate();
         URI uri = UriComponentsBuilder.fromHttpUrl(this.baseUrl + mealplan)
                 .queryParam("timeFrame","day")
-                .queryParam("apiKey","0149b69cd3e34699a310f9e63bb0634b")
+                .queryParam(this.apiKey)
                 .queryParam("numCalories",numCalories)
                 .queryParam("diet",diet)
                 .queryParam("exclusion",exclusions)
