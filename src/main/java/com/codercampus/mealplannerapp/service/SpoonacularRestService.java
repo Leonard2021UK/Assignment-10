@@ -1,8 +1,6 @@
 package com.codercampus.mealplannerapp.service;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.context.ApplicationContext;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
@@ -13,9 +11,6 @@ import java.util.Map;
 
 @Service
 public class SpoonacularRestService {
-
-    @Autowired
-    private ApplicationContext context;
 
     private final RestTemplate restTemplate = new RestTemplate();
 
@@ -28,7 +23,7 @@ public class SpoonacularRestService {
     @Value("${spoonacular.tokens.apiKey}")
     private String apiKey;
 
-    public <T> ResponseEntity<T> getResource(Map<String,String> queryParams,Class<T> responseDto) throws ClassNotFoundException {
+    public <T> ResponseEntity<T> getResource(Map<String,String> queryParams,Class<T> responseDto) {
 
         URI uri = UriComponentsBuilder.fromHttpUrl(this.baseUrl + mealplan)
                 .queryParam("timeFrame",queryParams.get("timeFrame"))

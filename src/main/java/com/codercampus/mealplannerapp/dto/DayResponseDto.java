@@ -1,6 +1,5 @@
 package com.codercampus.mealplannerapp.dto;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
